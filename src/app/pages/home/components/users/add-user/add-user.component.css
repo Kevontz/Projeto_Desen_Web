@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 70vh;
+    padding: 5px;
+    border-style: double;
+}
+
+.form-floating{
+    padding-top: 5px;
+    width: 70%;
+}
+
+.select-field{
+    padding-top: 5px;
+    width: 70%;
+}
+
+.button{
+    padding-top: 5px;
+}
