@@ -5,19 +5,26 @@
     width: 70%;
     height: 70vh;
     padding: 5px;
-    border-style: double;
+    margin-top: 50px;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 5px;
+    border-color: darkgrey;
+    background-color: whitesmoke;
 }
 
 .form-floating{
     padding-top: 5px;
-    width: 70%;
+    width: 450px;
 }
 
 .select-field{
     padding-top: 5px;
-    width: 70%;
+    width: 450px;
 }
 
 .button{
+    display: flex;
+    justify-content: center;
     padding-top: 5px;
 }

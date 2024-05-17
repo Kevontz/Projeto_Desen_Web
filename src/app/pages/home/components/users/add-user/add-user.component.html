@@ -1,30 +1,32 @@
 <div class="container">
     <h1>Add Users</h1>
+    <form [formGroup]="userFormGroup" (ngSubmit)="onSubmit()">
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Nome">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Nome" formControlName="nome">
             <label for="floatingInput">Nome</label>
         </div>
         
         <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
             <label for="floatingInput">E-mail</label>
         </div>
+        
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="senha">
             <label for="floatingPassword">Senha</label>
         </div>
         
         <div class="select-field">
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Engenheiro de FE</option>
-            <option value="1">Engenheiro de BE</option>
-            <option value="2">Analista de dados</option>
-            <option value="3">Líder Técnico</option>
-         </select>
-    </div>
+            <select class="form-select" aria-label="Default select example" formControlName="funcao">
+                <option value="engenheiro_fe">Engenheiro de FE</option>
+                <option value="engenheiro_be">Engenheiro de BE</option>
+                <option value="analista_dados">Analista de dados</option>
+                <option value="lider_tecnico">Líder Técnico</option>
+            </select>
+        </div>
 
-    <div class="button">
-        <button type="button" class="btn btn-outline-success">Salvar</button>
-    </div>
+        <div class="button">
+            <button type="submit" class="btn btn-outline-success" [disabled]="!userFormGroup.valid">Salvar</button>
+        </div>
+    </form>
 </div>
-
