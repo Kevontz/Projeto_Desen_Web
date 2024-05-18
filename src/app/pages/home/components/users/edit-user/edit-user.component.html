@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Add Users</h1>
+    <h1>Edit Users</h1>
     <form [formGroup]="userFormGroup" (ngSubmit)="onSubmit()">
         <div class="form-floating">
             <input type="text" class="form-control" id="floatingInput" placeholder="Nome" formControlName="nome">
@@ -35,7 +35,7 @@
         </div>
 
         <div class="button">
-            <button type="submit" class="btn btn-outline-success" [disabled]="!userFormGroup.valid">Salvar</button>
+            <button type="submit" class="btn btn-outline-success" [disabled]="!userFormGroup.valid">Salvar Alterações</button>
         </div>
     </form>
 </div>
