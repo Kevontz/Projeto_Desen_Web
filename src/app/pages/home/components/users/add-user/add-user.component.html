@@ -4,16 +4,25 @@
         <div class="form-floating">
             <input type="text" class="form-control" id="floatingInput" placeholder="Nome" formControlName="nome">
             <label for="floatingInput">Nome</label>
+            <div *ngIf="userFormGroup.get('nome')?.invalid && (userFormGroup.get('nome')?.dirty || userFormGroup.get('nome')?.touched)">
+                <div class="text-danger">Este campo não pode estar vazio.</div>
+            </div>
         </div>
         
         <div class="form-floating">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
             <label for="floatingInput">E-mail</label>
+            <div *ngIf="userFormGroup.get('email')?.invalid && (userFormGroup.get('email')?.dirty || userFormGroup.get('email')?.touched)">
+                <div class="text-danger">Por favor, insira um e-mail válido.</div>
+            </div>
         </div>
         
         <div class="form-floating">
             <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="senha">
             <label for="floatingPassword">Senha</label>
+            <div *ngIf="userFormGroup.get('senha')?.invalid && (userFormGroup.get('senha')?.dirty || userFormGroup.get('senha')?.touched)">
+                <div class="text-danger">Insira uma senha entre 6 e 15 caracteres.</div>
+            </div>
         </div>
         
         <div class="select-field">

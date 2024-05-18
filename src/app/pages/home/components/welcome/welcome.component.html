@@ -1,8 +1,16 @@
-<div class="container-fluid">
-  <div class="row  align-items-center text-center full-height">
-    <div class="col">
-      <h1>Welcome to your aplication</h1>
-      <h2>You are logged in</h2>
-    </div>
-  </div>
+<div class="container">
+  <h3>Home</h3>
+  <p>Usuarios Cadastrados: {{ userCount }}</p>
+  <h5>Usuarios por Profissão</h5>
+  <table class="table">
+    <thead>
+      <tr></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let profissao of profissoes | keyvalue">
+        <td>{{profissao.key}}</td>
+        <td>{{profissao.value}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

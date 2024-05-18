@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-user',
@@ -7,9 +8,9 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
-  userFormGroup!: FormGroup;
+  userFormGroup!: FormGroup
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit() {
     this.userFormGroup = this.fb.group({
@@ -23,6 +24,7 @@ export class AddUserComponent implements OnInit {
   onSubmit() {
     if (this.userFormGroup.valid) {
       console.log('Novo usuário:', this.userFormGroup.value);
+      this.router.navigate(["/app/users"])
     }
   }
 }
